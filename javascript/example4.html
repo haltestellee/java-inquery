@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8">
+        <title>Javascript</title>
+        <script>
+            function btnClick(){
+              window.alert("ボタンがクリックされました");
+            }
+            function btnHover(flag){
+                var btn = document.getElementById("btn");
+               
+                if (flag==0){
+                    btn.innerHTML="click!!";
+                    btn.style.backgroundColor="#ffffff";
+                }else{                 
+                    btn.innerHTML="over!!";
+                    btn.style.backgroundColor="#ffff00";
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <button onclick="btnClick()"id="btn" onmouseout="btnHover(0)"
+        onmouseover="btnHover(1)">click!!</button>
+    </body>
+<html>
